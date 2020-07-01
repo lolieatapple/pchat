@@ -1,4 +1,29 @@
 
 .normal {
-  background: #79F2C0;
+  color: white;
+}
+
+.title {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.history {
+  background-color: black;
+  height: 60vh;
+  width: 85vw;
+  max-width: 800px;
+  border-radius: 15px;
+}
+
+.input {
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  width: 85vw;
+  max-width: 800px;
+  height: 20vh;
+  margin-top: 15px;
+  color: white;
 }

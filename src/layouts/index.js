@@ -1,12 +1,16 @@
 import styles from './index.css';
+import { Component } from 'react';
+import router from 'umi/router';
 
-function BasicLayout(props) {
-  return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      {props.children}
-    </div>
-  );
+class BasicLayout extends Component {
+  render() {
+    return (
+      <div className={styles.normal}>
+        {this.props.children}
+      </div>
+    );
+  }
 }
+
 
 export default BasicLayout;
