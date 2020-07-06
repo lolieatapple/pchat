@@ -132,6 +132,7 @@ class Chat extends Component {
     '水瓶',
     '双鱼',
     '喵喵',
+    '南瓜',
   ]
 
   onKeyDown = (e) => {
