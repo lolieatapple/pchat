@@ -13,7 +13,7 @@ class Chat extends Component {
       nick: this.nicks[Math.floor(Math.random() * this.nicks.length)],
       messages: [{ type: "msg", roomCode: "0002", nick: "小助手", content: "欢迎光临隐私聊天室！这里的记录不会在任何地方保存，而且超过10分钟会自动清除。", time: Date.now() }],
     };
-    this.ws = new WebSocket('ws://localhost:8080');
+    this.ws = new WebSocket('wss://cat.molin.tech:9000');
     this.ws.addEventListener('message', this.onMessage);
   }
 
