@@ -15,6 +15,8 @@
   width: 85vw;
   max-width: 800px;
   border-radius: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .input {
@@ -56,4 +58,50 @@
   border-radius: 15px;
   border: none;
   padding-left: 10px;
+}
+
+.nick {
+  text-align: left;
+  padding: 20px 20px 10px;
+  color: #c0c0c0;
+  font-size: 14px;
+}
+
+.time {
+  text-align: left;
+  padding: 23px 20px 10px 0px;
+  color: gray;
+  font-size: 12px;
+}
+
+.msg {
+  text-align: left;
+  padding: 8px 8px 8px 8px;
+  margin: 0px 16px 3px 16px;
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  max-width: 75vw;
+  border-radius: 8px;
+  color: #c0c0c0;
+  background: #293d4e;
+  word-break:break-all;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.msgSelf {
+  text-align: left;
+  padding: 8px 8px 8px 8px;
+  margin: 0px 16px 3px 16px;
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  max-width: 75vw;
+  border-radius: 8px;
+  color: #c0c0c0;
+  background: #294c4e;
+  word-break:break-all;
+  word-break: break-all;
+  white-space: normal;
 }

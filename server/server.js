@@ -4,20 +4,6 @@ const server = new WebSocket.Server({port: 8080 });
 
 let rooms = [];
 
-let msgModal = {
-  type: 'msg',  // msg, ping, pong, cmd
-  content: '',   // text, create
-  roomCode: '',
-  nick: '',
-  ip: ''
-}
-
-let roomModal = {
-  personIp: [],
-  personWs: [],
-  roomCode: ''
-}
-
 function broadcast(room, msg, self) {
   console.log('broadcast in', room.roomCode, msg);
   for (let i=0; i<room.personWs.length; i++) {
@@ -33,7 +19,6 @@ server.on('open', function open() {
 
 server.on('close', function close() {
   console.log('disconnected');
-
 });
 
 function createRoomCode(code) {
