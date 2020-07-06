@@ -1,11 +1,11 @@
 const WebSocket = require('ws');
 
-const server = new WebSocket.Server({port: 8080 });
+const server = new WebSocket.Server({port: 9090 });
 
 let rooms = [];
 
 function broadcast(room, msg, self) {
-  console.log('broadcast in', room.roomCode, msg);
+  // console.log('broadcast in', room.roomCode, msg);
   for (let i=0; i<room.personWs.length; i++) {
     if (room.personWs[i] !== self) {
       room.personWs[i].send(JSON.stringify(msg));
@@ -93,7 +93,7 @@ function sendMsg(roomCode, ws, msg) {
   for (let i=0; i<rooms.length; i++) {
     if (rooms[i].roomCode === roomCode) {
       broadcast(rooms[i], msg, ws);
-      console.log('send msg:', rooms[i].roomCode);
+      // console.log('send msg:', rooms[i].roomCode);
       break;
     }
   }
@@ -111,7 +111,7 @@ server.on('connection', function connection(ws, req) {
     let msg = JSON.parse(message);
     switch (msg.type) {
       case 'msg':
-        console.log('send msg:', msg.roomCode);
+        // console.log('send msg:', msg.roomCode);
         if (msg.roomCode === '') {
           return;
         }
@@ -174,4 +174,4 @@ function ping() {
 
 setInterval(ping, 5000);
 
-console.log('server started at 8080');
+console.log('server started at 9090');
