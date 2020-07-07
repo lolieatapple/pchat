@@ -30,7 +30,7 @@ class Index extends Component {
         {
           this.state.waiting ? <label style={{color: "white"}}>Waiting...</label> : <label/>
         }
-
+        <a href="https://afdian.net/@molin" style={{color: "white", top:"30vh", position:"relative", fontSize:"14px"}}>打赏/赞助/捐赠</a>
       </div>
     );
   }
