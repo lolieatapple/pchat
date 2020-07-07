@@ -95,9 +95,14 @@ class Chat extends Component {
     if (messages.length < 0) {
       return;
     }
-    if (messages[0] && Date.now() - messages[0].time > 600000) {
-      messages.shift();
+    for (let i=0; i<100; i++) {
+      if (messages[0] && Date.now() - messages[0].time > 600000) {
+        messages.shift();
+      } else {
+        break;
+      }
     }
+
     this.setState({messages});
   }
 
