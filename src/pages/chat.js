@@ -23,7 +23,7 @@ class Chat extends Component {
   }
 
   onMessage = (event) => {
-    console.log('Message from server ', event.data);
+    // console.log('Message from server ', event.data);
     let obj = JSON.parse(event.data);
     switch (obj.type) {
       case "update":
@@ -32,7 +32,7 @@ class Chat extends Component {
       case "msg":
         let messages = this.state.messages.slice();
         messages.push(obj);
-        console.log(obj);
+        // console.log(obj);
         this.setState({ messages });
         setTimeout(this.scrollToBottom, 100);
         break;
@@ -52,7 +52,7 @@ class Chat extends Component {
   }
 
   async componentDidMount() {
-    console.log('url', this.props.location.query);
+    // console.log('url', this.props.location.query);
     let query = this.props.location.query;
     let msg = {};
     switch (query.type) {
@@ -82,7 +82,7 @@ class Chat extends Component {
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount');
+    // console.log('componentWillUnmount');
     this.ws.close();
     if (this.timer) {
       clearInterval(this.timer);
@@ -131,8 +131,6 @@ class Chat extends Component {
     '摩羯',
     '水瓶',
     '双鱼',
-    '喵喵',
-    '南瓜',
   ]
 
   onKeyDown = (e) => {
@@ -186,15 +184,19 @@ class Chat extends Component {
         <div className={styles.sendArea}>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div style={{ margin: "8px" }}>{"昵称："}</div>
-            <select className={styles.select} value={this.state.nick} onChange={e => this.setState({ nick: e.target.value })}>
-              {
-                this.nicks.map((v) => {
-                  return (<option value={v} key={v}>{v}</option>);
-                })
-              }
-            </select>
+            <div className={styles["select-editable"]}>
+              <select value={this.state.nick} onChange={e => this.setState({ nick: e.target.value })}>
+                {
+                  this.nicks.map((v) => {
+                    return (<option value={v} key={v}>{v}</option>);
+                  })
+                }
+              </select>
+              <input type="text" name="format"
+                value={this.state.nick}
+                onChange={e => this.setState({ nick: e.target.value })} />
+            </div>
           </div>
-
           <button className={styles.sendButton} onClick={this.onSend}>发送</button>
         </div>
       </div>

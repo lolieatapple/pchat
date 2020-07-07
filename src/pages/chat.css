@@ -1,107 +1,153 @@
-
 .normal {
   color: white;
 }
 
 .title {
-  margin: 10px;
-  display: flex;
+  margin         : 10px;
+  display        : flex;
   justify-content: space-between;
 }
 
 .history {
   background-color: black;
-  height: 60vh;
-  width: 85vw;
-  max-width: 800px;
-  border-radius: 15px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height          : 60vh;
+  width           : 85vw;
+  max-width       : 800px;
+  border-radius   : 15px;
+  overflow-y      : auto;
+  overflow-x      : hidden;
 }
 
 .input {
   background-color: black;
-  border: none;
-  border-radius: 5px;
-  width: 85vw;
-  max-width: 800px;
-  height: 20vh;
-  margin-top: 15px;
-  color: white;
+  border          : none;
+  border-radius   : 5px;
+  width           : 85vw;
+  max-width       : 800px;
+  height          : 20vh;
+  margin-top      : 15px;
+  color           : white;
 }
 
 .sendArea {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
 }
 
 .sendButton {
-  color: white;
+  color           : white;
   background-color: rgba(255, 255, 255, 0.159);
-  border-radius: 15px;
-  border: none;
-  height: 30px;
-  width: 100px;
-  margin: 5px;
+  border-radius   : 15px;
+  border          : none;
+  height          : 30px;
+  width           : 100px;
+  margin          : 5px;
 }
+
 .sendButton:hover {
   background-color: rgba(255, 255, 255, 0.425);
 }
 
 .select {
-  color: white;
+  color           : white;
   background-color: rgba(255, 255, 255, 0.159);
-  height: 30px;
-  width: 100px;
-  text-align: center;
-  margin: 5px;
-  border-radius: 15px;
-  border: none;
-  padding-left: 10px;
+  height          : 30px;
+  width           : 100px;
+  text-align      : center;
+  margin          : 5px;
+  border-radius   : 15px;
+  border          : none;
+  padding-left    : 10px;
 }
 
 .nick {
   text-align: left;
-  padding: 20px 20px 10px;
-  color: #c0c0c0;
-  font-size: 14px;
+  padding   : 20px 20px 10px;
+  color     : #c0c0c0;
+  font-size : 14px;
 }
 
 .time {
   text-align: left;
-  padding: 23px 20px 10px 0px;
-  color: gray;
-  font-size: 12px;
+  padding   : 23px 20px 10px 0px;
+  color     : gray;
+  font-size : 12px;
 }
 
 .msg {
-  text-align: left;
-  padding: 8px 8px 8px 8px;
-  margin: 0px 16px 3px 16px;
-  width: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  max-width: 75vw;
+  text-align   : left;
+  padding      : 8px 8px 8px 8px;
+  margin       : 0px 16px 3px 16px;
+  width        : fit-content;
+  width        : -webkit-fit-content;
+  width        : -moz-fit-content;
+  max-width    : 75vw;
   border-radius: 8px;
-  color: #c0c0c0;
-  background: #293d4e;
-  word-break:break-all;
-  word-break: break-all;
-  white-space: normal;
+  color        : #c0c0c0;
+  background   : #293d4e;
+  word-break   : break-all;
+  word-break   : break-all;
+  white-space  : normal;
 }
 
 .msgSelf {
-  text-align: left;
-  padding: 8px 8px 8px 8px;
-  margin: 0px 16px 3px 16px;
-  width: fit-content;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  max-width: 75vw;
+  text-align   : left;
+  padding      : 8px 8px 8px 8px;
+  margin       : 0px 16px 3px 16px;
+  width        : fit-content;
+  width        : -webkit-fit-content;
+  width        : -moz-fit-content;
+  max-width    : 75vw;
   border-radius: 8px;
-  color: #c0c0c0;
-  background: #294c4e;
-  word-break:break-all;
-  word-break: break-all;
-  white-space: normal;
+  color        : #c0c0c0;
+  background   : #294c4e;
+  word-break   : break-all;
+  word-break   : break-all;
+  white-space  : normal;
+}
+
+/******/
+
+.select-editable {
+  position        : relative;
+  background-color: white;
+  border          : none;
+  width           : 120px;
+  height          : 18px;
+  margin:5px;
+  background-color: transparent;
+}
+
+.select-editable select {
+  position : absolute;
+  top      : 0px;
+  left     : 0px;
+  font-size: 14px;
+  border   : none;
+  width    : 120px;
+  height: 30px;
+  margin   : 0;
+  color           : white;
+  background-color: rgba(255, 255, 255, 0.159);
+  border-radius   : 15px;
+  text-align: center;
+  padding-left    : 10px;
+}
+
+.select-editable input {
+  position : absolute;
+  top      : 5px;
+  left     : 5px;
+  width    : 100px;
+  padding  : 1px;
+  font-size: 14px;
+  border   : none;
+  background-color:rgba(61, 61, 61, 1);
+  color: white;
+  text-align: center;
+}
+
+.select-editable select:focus,
+.select-editable input:focus {
+  outline: none;
 }
