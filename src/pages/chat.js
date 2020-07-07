@@ -7,8 +7,8 @@ class Chat extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      roomCode: 0,
-      members: 0,
+      roomCode: "请稍候...",
+      members: "请稍候...",
       inputText: "",
       nick: this.nicks[Math.floor(Math.random() * this.nicks.length)],
       messages: [{ type: "msg", roomCode: "0002", nick: "小助手", content: "欢迎光临隐私聊天室！这里的记录不会在任何地方保存，而且超过10分钟会自动清除。", time: Date.now() }],
